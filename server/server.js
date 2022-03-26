@@ -18,7 +18,16 @@
 
 const express = require ("express");
 const app = express();
+const mysql = require('mysql');
+
+const db = mysql.createConnection({
+  user:"root",
+  host:"localhost",
+  password:"Kelikume11&&",
+  database:"user_manager"
+
+})
 
 app.listen(3002, ()=>{
-   console.log("Hello World");
+   console.log("Hello World: your server is running on port:3002");
 });
