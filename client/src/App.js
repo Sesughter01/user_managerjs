@@ -1,6 +1,7 @@
 
 import './App.css';
 import {useState} from "react";
+import Axios from 'axios';
 
 function App() {
 
@@ -8,10 +9,18 @@ function App() {
    const [age, setAge] = useState("0");
    const [country, setCountry] = useState("");
    const [position, setPosition] = useState("");
-   const [wage, setWage] = useState(0);
+   const [wages, setWage] = useState(0);
     
-  //  const displayInfo = () =>{
-  //    console.log(name + age + country + position + wage)};
+   const addUser = () =>{
+    Axios.post('http://localhost:3002/make',{
+      name: name,
+      age:age,
+      country:country,
+      position:position,
+      wages:wages,
+
+
+    })};
 
   return (
     <div className="App">

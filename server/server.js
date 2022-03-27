@@ -50,8 +50,14 @@ app.post('/make', (req,res)=>{
     db.query('INSERT INTO user_tb (Names, Age, Country, Position, Wages) VALUES(?,?,?,?,?)',
     
     [name, age, country,position,wages], (err,result)=>{
+        
+      if (err){
+        console.log(err);
+      }else{
 
-      
+        res.send('Values Inserted');
+      }
+
     }
     
     );
