@@ -21,7 +21,14 @@
 .users button{
   margin-top: 30px !important;
 }
-
+table{
+  width: 50%;
+}
+tr,td{
+  border-collapse: collapse;
+  border-bottom: 1px solid grey;
+  padding: 8px;
+}
 /* MQs */
 
 
@@ -63,6 +70,21 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    /* overflow-x: auto; */
+  }
+  .user{
+    width: 100%;
+  }
+  .userTable{
+     
+     
+     align-items: center;
+    width:100%;
+    
+  } 
+  td{
+    text-align: left;
+    padding: 8px;
   }
 
 }
@@ -99,5 +121,11 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow-x: auto;
   }
+  td{
+    text-align: left;
+    padding: 8px;
+  }
+
 }

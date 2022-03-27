@@ -30,8 +30,9 @@ function App() {
    
    };
    const getUsers = ()=>{
-      Axios.get('http://localhost:3002/users').then(()=>{
-         console.log('Success');
+      Axios.get('http://localhost:3002/users').then((response)=>{
+         // console.log(response);
+         setUserList(response.data);
       })
    }
   return (
@@ -58,7 +59,23 @@ function App() {
       </div>
     
       <div className="users">
-         <button>Show Users</button>
+         <button onClick={getUsers}>Show Users</button>
+         {userlist.map((val, key)=>{
+            return (<div className='user'>
+               <table className='usersTable'>
+                  
+                  <tr>
+                     <td><h3>{val.main_id}</h3> </td>
+                     <td><h3>{val.Name}</h3> </td>
+                     <td><h3>{val.Age}</h3> </td>
+                     <td><h3>{val.Country}</h3> </td>
+                     <td><h3>{val.Postion}</h3> </td>
+                     <td><h3>{val.Wages}</h3> </td>
+                  </tr>
+               </table>
+              
+               </div>);
+         })}
       </div>
     </div>
   );

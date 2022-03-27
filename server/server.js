@@ -38,14 +38,12 @@ const db = mysql.createConnection({
 
 })
 //  Setup listening port
-app.listen(3002, ()=>{
-   console.log("Hello World: your server is running on port:3002");
-});
+
 
 // Create Routes for Endpoints
 
 app.post('/make', (req,res)=>{
-   console.log(req.body);
+  //  console.log(req.body);
     const name = req.body.name;
     const age = req.body.age;
     const country = req.body.country;
@@ -66,4 +64,17 @@ app.post('/make', (req,res)=>{
     }
     
     );
+});
+app.get('/users', (req,res)=>{
+db.query('SELECT * FROM user_tb',(err,result)=>{
+  if (err){
+    console.log(err);
+  }else{
+    res.send(result);
+  };
+});
+});
+
+app.listen(3002, ()=>{
+   console.log("Hello World: your server is running on port:3002");
 });
