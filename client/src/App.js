@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 import {useState} from "react";
 import Axios from 'axios';
@@ -10,9 +10,13 @@ function App() {
    const [country, setCountry] = useState("");
    const [position, setPosition] = useState("");
    const [wages, setWage] = useState(0);
+
+   const [userlist,setUserList] = useState([]);
     
+
    const addUser = () =>{
-    Axios.post('http://localhost:3002/make',{
+      // console.log(name);
+      Axios.post('http://localhost:3002/make',{
       name: name,
       age:age,
       country:country,
@@ -20,8 +24,16 @@ function App() {
       wages:wages,
 
 
-    })};
-
+    }).then(()=>{
+       console.log("Success");
+    });
+   
+   };
+   const getUsers = ()=>{
+      Axios.get('http://localhost:3002/users').then(()=>{
+         console.log('Success');
+      })
+   }
   return (
     <div className="App">
       <div className="info">
@@ -41,9 +53,13 @@ function App() {
           <label >Wage (Per Annum):</label>
           <input type="number" onChange={(event)=> {
              setWage(event.target.value)}}/>
-          <button>Add Employee</button>
+          <button onClick={addUser}>Add User</button>
+         
       </div>
-      
+    
+      <div className="users">
+         <button>Show Users</button>
+      </div>
     </div>
   );
 }

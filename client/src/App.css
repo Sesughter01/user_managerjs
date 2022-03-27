@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   /* text-align: center; */
   display: flex;
@@ -12,6 +18,10 @@
   align-items: center;
 }
 
+.users button{
+  margin-top: 30px !important;
+}
+
 /* MQs */
 
 
@@ -21,7 +31,7 @@
   .info input{
   
     width:16.66% ;
-    height: 36px;
+    /* height: 36px; */
     font-size: 1rem;
     padding-left: 10px;
     color: #727272;
@@ -29,21 +39,30 @@
     border-color: #b92020 !important;
     margin-top: 5px;
     margin-bottom: 2px;
+    padding: 10px;
   }
-  .info button{
+  
+   button{
     outline: none;
     border: none;
     border-radius: 8px;
-    width: 17.66%;
-    height: 48px;
+    width: 16.66%;
+    /* height: 48px; */
     color: #fff;
     background-color: rgb(12, 95, 95);
-    margin-top: 5px;
+    margin-top: 15px;
+    padding: 15px;
   }
 
-  .info button:hover{
+   button:hover{
     cursor: pointer;
     background-color: rgb(107, 106, 106);
+  }
+  .users{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
 }
@@ -52,25 +71,33 @@
 
   .info input{
     width:84% ;
-    height: 36px;
+    /* height: 36px; */
     font-size: 0.7rem;
     padding-left: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #727272;
     border-radius:8px ;
     border-color: #b92020 !important;
     margin-top: 5px;
     margin-bottom: 2px;
   }
-  .info button{
+   button{
     outline: none;
     border: none;
     border-radius: 8px;
-    width: 85%;
-    height: 36px;
+    width: 84%;
+    /* height: 36px; */
     color: #fff;
     background-color: rgb(12, 95, 95);
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 1rem;
+    padding:15px;
   }
-
+  .users{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }

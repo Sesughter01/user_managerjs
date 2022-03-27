@@ -24,6 +24,10 @@ const app = express();
 // Import the mysql module object
 const mysql = require('mysql'); 
 
+const cors = require('cors');
+
+app.use(cors());
+app.use(express.json());
 
 // Create Database connection
 const db = mysql.createConnection({
@@ -41,13 +45,14 @@ app.listen(3002, ()=>{
 // Create Routes for Endpoints
 
 app.post('/make', (req,res)=>{
+   console.log(req.body);
     const name = req.body.name;
     const age = req.body.age;
     const country = req.body.country;
-    const position = req.body.poistion;
+    const position = req.body.position;
     const wages = req.body.wages;
 
-    db.query('INSERT INTO user_tb (Names, Age, Country, Position, Wages) VALUES(?,?,?,?,?)',
+    db.query('INSERT INTO user_tb (Name, Age, Country, Position, Wages) VALUES(?,?,?,?,?)',
     
     [name, age, country,position,wages], (err,result)=>{
         
