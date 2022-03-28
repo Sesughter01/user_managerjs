@@ -26,6 +26,7 @@ function App() {
 
     }).then(()=>{
        console.log("Success");
+       
     });
    
    };
