@@ -44,7 +44,7 @@ tr{
 @media (min-width:576px){
   .App{
     width:80vw;
-    height: 80vh;
+    /* height: 80vh; */
     margin: 0.5rem auto auto;
   }
   .App h1{
@@ -125,7 +125,7 @@ tr{
   .userTable{
      
      
-    padding: 25px;
+    /* padding: 25px; */
     width:100%;
     
   } 
