@@ -37,26 +37,27 @@ function App() {
    }
   return (
     <div className="App">
+       <h1>SIMPLE CRUD APP WITH REACT AND NODE</h1>
       <div className="info">
 
-          <label >Name:</label>
-          <input type="text"  onChange={(event)=> {
+          {/* <label >Name:</label> */}
+          <input type="text" placeholder='Name' onChange={(event)=> {
              setName(event.target.value)}}/>
-          <label >Age:</label>
-          <input type="number" onChange={(event)=> {
+          {/* <label >Age:</label> */}
+          <input type="number" placeholder='Age' onChange={(event)=> {
              setAge(event.target.value)}}/>
-          <label >Country:</label>
-          <input type="text" onChange={(event)=> {
+          {/* <label >Country:</label> */}
+          <input type="text" placeholder='Country' onChange={(event)=> {
              setCountry(event.target.value)}} />
-          <label >Position:</label>
-          <input type="text" onChange={(event)=> {
+          {/* <label >Position:</label> */}
+          <input type="text" placeholder='Position' onChange={(event)=> {
              setPosition(event.target.value)}} />
-          <label >Wage (Per Annum):</label>
-          <input type="number" onChange={(event)=> {
+          {/* <label >Wage (Per Annum):</label> */}
+          <input type="number" id='wage' placeholder='Wage (per annum)' onChange={(event)=> {
              setWage(event.target.value)}}/>
-          <button onClick={addUser}>Add User</button>
          
       </div>
+      <button onClick={addUser}>Add User</button>
     
       <div className="users">
          <button onClick={getUsers}>Show Users</button>
