@@ -69,7 +69,7 @@ function App() {
                      <td><h3>{val.Name}</h3> </td>
                      <td><h3>{val.Age}</h3> </td>
                      <td><h3>{val.Country}</h3> </td>
-                     <td><h3>{val.Postion}</h3> </td>
+                     <td><h3>{val.Position}</h3> </td>
                      <td><h3>{val.Wages}</h3> </td>
                   </tr>
                </table>
